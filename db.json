@@ -1,0 +1,405 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Excavadoras"
+    },
+    {
+      "id": 2,
+      "name": "Retroexcavadoras"
+    },
+    {
+      "id": 3,
+      "name": "Cargadores"
+    },
+    {
+      "id": 4,
+      "name": "Grúas"
+    },
+    {
+      "id": 5,
+      "name": "Bulldozers"
+    }
+  ],
+  "machinery": [
+    {
+      "id": 1,
+      "ownerProfileId": 1,
+      "categoryId": 1,
+      "name": "Excavadora CAT 320",
+      "description": "Excavadora hidráulica para movimiento de tierra y trabajos de construcción.",
+      "type": "EXCAVATOR",
+      "brand": "Caterpillar",
+      "model": "320",
+      "manufactureYear": 2022,
+      "hourlyRate": {
+        "amount": 280,
+        "currency": "PEN"
+      },
+      "status": "AVAILABLE",
+      "location": {
+        "department": "Lima",
+        "province": "Lima",
+        "district": "Ate",
+        "address": "Av. Nicolás Ayllón 2450"
+      },
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-25T15:30:00Z"
+    },
+    {
+      "id": 2,
+      "ownerProfileId": 1,
+      "categoryId": 2,
+      "name": "Retroexcavadora JCB 3CX",
+      "description": "Equipo versátil para excavación, carga y trabajos urbanos.",
+      "type": "BACKHOE_LOADER",
+      "brand": "JCB",
+      "model": "3CX",
+      "manufactureYear": 2021,
+      "hourlyRate": {
+        "amount": 190,
+        "currency": "PEN"
+      },
+      "status": "AVAILABLE",
+      "location": {
+        "department": "Cusco",
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Prolongación La Cultura 810"
+      },
+      "createdAt": "2026-09-03T09:15:00Z",
+      "updatedAt": "2026-09-26T11:00:00Z"
+    },
+    {
+      "id": 3,
+      "ownerProfileId": 1,
+      "categoryId": 3,
+      "name": "Cargador frontal Volvo L90H",
+      "description": "Cargador de alto rendimiento para manipulación de materiales.",
+      "type": "LOADER",
+      "brand": "Volvo",
+      "model": "L90H",
+      "manufactureYear": 2020,
+      "hourlyRate": {
+        "amount": 230,
+        "currency": "PEN"
+      },
+      "status": "RESERVED",
+      "location": {
+        "department": "Arequipa",
+        "province": "Arequipa",
+        "district": "Cerro Colorado",
+        "address": "Vía de Evitamiento 1250"
+      },
+      "createdAt": "2026-09-05T14:00:00Z",
+      "updatedAt": "2026-09-27T08:45:00Z"
+    },
+    {
+      "id": 4,
+      "ownerProfileId": 1,
+      "categoryId": 4,
+      "name": "Grúa Liebherr LTM 1050",
+      "description": "Grúa móvil para montaje industrial y elevación de cargas pesadas.",
+      "type": "CRANE",
+      "brand": "Liebherr",
+      "model": "LTM 1050-3.1",
+      "manufactureYear": 2019,
+      "hourlyRate": {
+        "amount": 420,
+        "currency": "PEN"
+      },
+      "status": "AVAILABLE",
+      "location": {
+        "department": "Callao",
+        "province": "Callao",
+        "district": "Ventanilla",
+        "address": "Av. Néstor Gambetta 620"
+      },
+      "createdAt": "2026-09-07T12:30:00Z",
+      "updatedAt": "2026-09-28T17:10:00Z"
+    },
+    {
+      "id": 5,
+      "ownerProfileId": 1,
+      "categoryId": 5,
+      "name": "Bulldozer Komatsu D65",
+      "description": "Tractor de orugas para nivelación y preparación de terrenos.",
+      "type": "BULLDOZER",
+      "brand": "Komatsu",
+      "model": "D65EX",
+      "manufactureYear": 2021,
+      "hourlyRate": {
+        "amount": 260,
+        "currency": "PEN"
+      },
+      "status": "RENTED",
+      "location": {
+        "department": "Piura",
+        "province": "Piura",
+        "district": "Castilla",
+        "address": "Carretera Piura-Chulucanas km 4"
+      },
+      "createdAt": "2026-09-09T16:20:00Z",
+      "updatedAt": "2026-09-29T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "ownerProfileId": 1,
+      "categoryId": 1,
+      "name": "Excavadora Hyundai HX220L",
+      "description": "Excavadora de gran capacidad para obras viales y movimiento de tierras.",
+      "type": "EXCAVATOR",
+      "brand": "Hyundai",
+      "model": "HX220L",
+      "manufactureYear": 2018,
+      "hourlyRate": {
+        "amount": 210,
+        "currency": "PEN"
+      },
+      "status": "IN_MAINTENANCE",
+      "location": {
+        "department": "La Libertad",
+        "province": "Trujillo",
+        "district": "Moche",
+        "address": "Panamericana Norte km 558"
+      },
+      "createdAt": "2026-09-11T08:40:00Z",
+      "updatedAt": "2026-09-30T13:25:00Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "CONTRACTOR",
+      "description": "Alquila maquinaria publicada por otros usuarios."
+    },
+    {
+      "id": 2,
+      "name": "FLEET_OWNER",
+      "description": "Publica y administra su propia maquinaria."
+    },
+    {
+      "id": 3,
+      "name": "FLEET_ADMINISTRATOR",
+      "description": "Administra la flota y el personal de una organización."
+    },
+    {
+      "id": 4,
+      "name": "OPERATOR",
+      "description": "Opera maquinaria en nombre de una organización."
+    },
+    {
+      "id": 5,
+      "name": "SYSTEM_ADMINISTRATOR",
+      "description": "Administra la plataforma MaquiControl."
+    }
+  ],
+  "user-accounts": [
+    {
+      "id": 1,
+      "email": "owner@example.com",
+      "credential": {
+        "passwordHash": "Demo1234",
+        "changedAt": "2026-09-01T09:00:00Z"
+      },
+      "status": "ACTIVE",
+      "roleIds": [
+        2
+      ],
+      "createdAt": "2026-09-01T09:00:00Z",
+      "lastLoginAt": null
+    },
+    {
+      "id": 2,
+      "email": "contractor@example.com",
+      "credential": {
+        "passwordHash": "Demo1234",
+        "changedAt": "2026-09-02T09:00:00Z"
+      },
+      "status": "ACTIVE",
+      "roleIds": [
+        1
+      ],
+      "createdAt": "2026-09-02T09:00:00Z",
+      "lastLoginAt": null
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "legalName": "Andes Maquinarias Demo S.A.C.",
+      "tradeName": "Andes Maquinarias",
+      "taxId": "20000000001",
+      "type": "RENTAL_COMPANY",
+      "address": "Av. Ejemplo 100, Ate, Lima"
+    },
+    {
+      "id": 2,
+      "legalName": "Constructora Demo del Sur S.A.C.",
+      "tradeName": "Constructora Demo",
+      "taxId": "20000000002",
+      "type": "CONSTRUCTION_COMPANY",
+      "address": "Calle Ficticia 250, Cerro Colorado, Arequipa"
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "userAccountId": 1,
+      "organizationId": 1,
+      "firstName": "Lucía",
+      "lastName": "Ramos Demo",
+      "documentNumber": "10000001",
+      "contactInformation": {
+        "phoneNumber": "900000001",
+        "secondaryEmail": "lucia.ramos@example.com",
+        "address": "Av. Ejemplo 100",
+        "district": "Ate",
+        "city": "Lima"
+      },
+      "createdAt": "2026-09-01T09:05:00Z",
+      "updatedAt": "2026-09-01T09:05:00Z"
+    },
+    {
+      "id": 2,
+      "userAccountId": 2,
+      "organizationId": 2,
+      "firstName": "Jorge",
+      "lastName": "Torres Demo",
+      "documentNumber": "10000002",
+      "contactInformation": {
+        "phoneNumber": "900000002",
+        "secondaryEmail": "jorge.torres@example.com",
+        "address": "Calle Ficticia 250",
+        "district": "Cerro Colorado",
+        "city": "Arequipa"
+      },
+      "createdAt": "2026-09-02T09:05:00Z",
+      "updatedAt": "2026-09-02T09:05:00Z"
+    }
+  ],
+  "rentals": [
+    {
+      "id": 1,
+      "machineryId": 3,
+      "contractorProfileId": 2,
+      "period": {
+        "startDate": "2026-10-20",
+        "endDate": "2026-10-24"
+      },
+      "status": "CONFIRMED",
+      "totalAmount": {
+        "amount": 9200,
+        "currency": "PEN"
+      },
+      "cancellationReason": null,
+      "requestedAt": "2026-10-01T10:00:00Z",
+      "confirmedAt": "2026-10-01T15:30:00Z",
+      "cancelledAt": null
+    },
+    {
+      "id": 2,
+      "machineryId": 5,
+      "contractorProfileId": 2,
+      "period": {
+        "startDate": "2026-10-05",
+        "endDate": "2026-10-16"
+      },
+      "status": "IN_PROGRESS",
+      "totalAmount": {
+        "amount": 24960,
+        "currency": "PEN"
+      },
+      "cancellationReason": null,
+      "requestedAt": "2026-09-28T09:00:00Z",
+      "confirmedAt": "2026-09-28T12:00:00Z",
+      "cancelledAt": null
+    },
+    {
+      "id": 3,
+      "machineryId": 1,
+      "contractorProfileId": 2,
+      "period": {
+        "startDate": "2026-11-02",
+        "endDate": "2026-11-03"
+      },
+      "status": "REQUESTED",
+      "totalAmount": {
+        "amount": 4480,
+        "currency": "PEN"
+      },
+      "cancellationReason": null,
+      "requestedAt": "2026-10-06T16:45:00Z",
+      "confirmedAt": null,
+      "cancelledAt": null
+    }
+  ],
+  "maintenances": [
+    {
+      "id": 1,
+      "machineryId": 6,
+      "type": "CORRECTIVE",
+      "status": "IN_PROGRESS",
+      "description": "Reparación del sistema hidráulico del brazo.",
+      "scheduledDate": "2026-10-06",
+      "startedAt": "2026-10-06T08:30:00Z",
+      "completedAt": null,
+      "technicianName": "Miguel Salas",
+      "cost": null,
+      "breakdownReports": [
+        {
+          "id": 1,
+          "description": "Fuga de aceite en el cilindro hidráulico del brazo.",
+          "severity": "HIGH",
+          "reportedAt": "2026-10-05T14:20:00Z",
+          "resolvedAt": null,
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "machineryId": 1,
+      "type": "PREVENTIVE",
+      "status": "SCHEDULED",
+      "description": "Cambio de aceite y filtros a las 500 horas.",
+      "scheduledDate": "2026-10-27",
+      "startedAt": null,
+      "completedAt": null,
+      "technicianName": null,
+      "cost": null,
+      "breakdownReports": []
+    }
+  ],
+  "service-operations": [
+    {
+      "id": 1,
+      "rentalId": 2,
+      "machineryId": 5,
+      "operatorProfileId": null,
+      "status": "IN_PROGRESS",
+      "startedAt": "2026-10-05T08:00:00Z",
+      "completedAt": null,
+      "workedHours": [
+        {
+          "id": 1,
+          "workDate": "2026-10-05",
+          "startTime": "08:00",
+          "endTime": "16:00",
+          "totalHours": 8,
+          "status": "VALIDATED",
+          "observations": null
+        },
+        {
+          "id": 2,
+          "workDate": "2026-10-06",
+          "startTime": "08:00",
+          "endTime": "17:00",
+          "totalHours": 9,
+          "status": "PENDING",
+          "observations": "Una hora extra por nivelación del acceso."
+        }
+      ]
+    }
+  ]
+}
