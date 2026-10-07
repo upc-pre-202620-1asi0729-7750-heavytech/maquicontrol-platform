@@ -28,7 +28,6 @@
       "categoryId": 1,
       "name": "Excavadora CAT 320",
       "description": "Excavadora hidráulica para movimiento de tierra y trabajos de construcción.",
-      "type": "EXCAVATOR",
       "brand": "Caterpillar",
       "model": "320",
       "manufactureYear": 2022,
@@ -52,7 +51,6 @@
       "categoryId": 2,
       "name": "Retroexcavadora JCB 3CX",
       "description": "Equipo versátil para excavación, carga y trabajos urbanos.",
-      "type": "BACKHOE_LOADER",
       "brand": "JCB",
       "model": "3CX",
       "manufactureYear": 2021,
@@ -76,7 +74,6 @@
       "categoryId": 3,
       "name": "Cargador frontal Volvo L90H",
       "description": "Cargador de alto rendimiento para manipulación de materiales.",
-      "type": "LOADER",
       "brand": "Volvo",
       "model": "L90H",
       "manufactureYear": 2020,
@@ -100,7 +97,6 @@
       "categoryId": 4,
       "name": "Grúa Liebherr LTM 1050",
       "description": "Grúa móvil para montaje industrial y elevación de cargas pesadas.",
-      "type": "CRANE",
       "brand": "Liebherr",
       "model": "LTM 1050-3.1",
       "manufactureYear": 2019,
@@ -124,7 +120,6 @@
       "categoryId": 5,
       "name": "Bulldozer Komatsu D65",
       "description": "Tractor de orugas para nivelación y preparación de terrenos.",
-      "type": "BULLDOZER",
       "brand": "Komatsu",
       "model": "D65EX",
       "manufactureYear": 2021,
@@ -148,7 +143,6 @@
       "categoryId": 1,
       "name": "Excavadora Hyundai HX220L",
       "description": "Excavadora de gran capacidad para obras viales y movimiento de tierras.",
-      "type": "EXCAVATOR",
       "brand": "Hyundai",
       "model": "HX220L",
       "manufactureYear": 2018,
@@ -401,5 +395,28 @@
         }
       ]
     }
-  ]
+  ],
+  "plans": [
+    {
+      "id": 1,
+      "code": "ESSENTIAL",
+      "monthlyPrice": {
+        "amount": 49,
+        "currency": "PEN"
+      },
+      "machineryLimit": 5,
+      "recommended": false
+    },
+    {
+      "id": 2,
+      "code": "PRO",
+      "monthlyPrice": {
+        "amount": 99,
+        "currency": "PEN"
+      },
+      "machineryLimit": 20,
+      "recommended": true
+    }
+  ],
+  "subscriptions": []
 }
