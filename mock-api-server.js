@@ -47,7 +47,6 @@ export class MockApiServer {
         app.use(jsonServer.bodyParser);
         app.get('/api/v1/health', (_req, res) => res.json({status: 'ok', time: new Date().toISOString()}));
         this.#addPaymentRoutes(app);
-        // Same rewrites as server/routes.json in MaquiControl-Frontend: sign-up creates a user account.
         app.use(jsonServer.rewriter({
             '/api/v1/authentication/sign-up': '/user-accounts',
             '/api/v1/*': '/$1',
@@ -58,7 +57,6 @@ export class MockApiServer {
         return app;
     }
 
-    /** Mercado Pago (sandbox) payments: registered before the json-server router. */
     #addPaymentRoutes(app) {
         const gateway = new MercadoPagoGateway(process.env.MERCADO_PAGO_ACCESS_TOKEN);
         const ensureConfigured = (_req, res, next) => gateway.configured
