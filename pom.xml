@@ -11,7 +11,7 @@
     <groupId>com.andesheavytech.maquicontrol</groupId>
     <artifactId>platform</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-    <name>maquicontrol-backend</name>
+    <name>maquicontrol-platform</name>
     <description>MaquiControl Platform is a RESTful API built on Domain-Driven Design (DDD) and CQRS. Developed with Java 27, Spring Boot 4, and MySQL, it manages heavy machinery fleets, rentals, maintenance, field operations, subscriptions, and billing for Peruvian heavy machinery companies.</description>
     <licenses>
         <license>

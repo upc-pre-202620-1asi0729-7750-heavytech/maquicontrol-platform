@@ -76,8 +76,8 @@ Every error is an RFC 9457 `ProblemDetail`:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/upc-pre-202620-1asi0729-7750-heavytech/maquicontrol-backend.git
-   cd maquicontrol-backend
+   git clone https://github.com/upc-pre-202620-1asi0729-7750-heavytech/maquicontrol-platform.git
+   cd maquicontrol-platform
    ```
 2. Set the environment variables listed above.
 3. Build and run:
