@@ -21,7 +21,7 @@ MaquiControl Platform is the RESTful API behind MaquiControl, the AndesHeavyTech
 
 ## Technologies
 
-- Java 21 and Spring Boot 4
+- Java 27 and Spring Boot 4
 - Apache Maven (or the bundled `./mvnw` wrapper)
 - Spring Web, Spring Data JPA (Hibernate) with MySQL
 - Spring Security with JWT (`io.jsonwebtoken`)
@@ -32,7 +32,7 @@ MaquiControl Platform is the RESTful API behind MaquiControl, the AndesHeavyTech
 
 ## Prerequisites
 
-- Java 21 or higher
+- Java 27 or higher
 - MySQL 8+ running locally
 - Docker (optional, for the containerized build)
 
@@ -76,8 +76,8 @@ Every error is an RFC 9457 `ProblemDetail`:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/upc-pre-202620-1asi0729-7750-heavytech/maquicontrol-backend.git
-   cd maquicontrol-backend
+   git clone https://github.com/upc-pre-202620-1asi0729-7750-heavytech/maquicontrol-platform.git
+   cd maquicontrol-platform
    ```
 2. Set the environment variables listed above.
 3. Build and run:
@@ -88,14 +88,27 @@ Every error is an RFC 9457 `ProblemDetail`:
 
 ## Deployment
 
-Build the image with the [Dockerfile](Dockerfile):
+The [Dockerfile](Dockerfile) builds the jar inside the container (multi-stage, Maven wrapper and Eclipse Temurin JDK 27) and runs it on the JRE with `SPRING_PROFILES_ACTIVE=prod` by default.
+
+### Local deployment
+
+| Compose file | Database | Command |
+| --- | --- | --- |
+| `docker-compose.container-db.yml` | A throwaway MySQL 8 container (host port `3307`) | `docker compose -f docker-compose.container-db.yml up --build` |
+| `docker-compose.host-docker-internal.yml` | The MySQL already running on your machine | `docker compose -f docker-compose.host-docker-internal.yml up --build` |
+
+Swagger UI is then at `http://localhost:8080/swagger-ui/index.html`.
+
+### Cloud deployment (Azure)
+
+`docker-compose.prod.yml` builds the `maquicontrol-platform:1.0.0` image and runs it with every value taken from the environment, the same variables the Azure Web App uses. Verify it against the Azure Database for MySQL before pushing:
 
 ```bash
-docker build -t maquicontrol-backend .
-docker run -p 8080:8080 -e DATABASE_URL=... -e DATABASE_NAME=... -e DATABASE_USER=... -e DATABASE_PASSWORD=... -e JWT_SECRET=... maquicontrol-backend
+docker compose -f docker-compose.prod.yml build --no-cache
+docker compose -f docker-compose.prod.yml up
 ```
 
-The image runs with `SPRING_PROFILES_ACTIVE=prod`.
+The verified image is pushed to Azure Container Registry and runs on Azure App Service (Linux, *Publish: Container*, port `8080`, Always On).
 
 ## Contributing
 

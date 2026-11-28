@@ -16,7 +16,7 @@ This document lists the conventions this codebase follows.
 
 ## Technical Stack
 
-- **Java 21**: records, sealed interfaces, pattern matching in `switch`.
+- **Java 27**: records, sealed interfaces, pattern matching in `switch`.
 - **Spring Boot 4.x**: constructor injection, REST controllers, Spring Data JPA, Spring Security.
 - **MySQL**: the datastore behind every profile.
 - **springdoc-openapi**: Swagger UI generated from the controllers.

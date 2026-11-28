@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # ---- Build stage: compile and package the Spring Boot jar with the Maven wrapper ----
-FROM eclipse-temurin:21-jdk AS build
+FROM eclipse-temurin:27-jdk AS build
 WORKDIR /workspace
 
 COPY mvnw .
@@ -13,7 +13,7 @@ COPY src src
 RUN ./mvnw -B -q package -DskipTests
 
 # ---- Runtime stage: only the JRE and the jar ----
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:27-jre
 WORKDIR /app
 
 RUN groupadd --system spring && useradd --system --gid spring spring
